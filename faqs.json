@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is your return policy?",
+    "answer": "You can return any item within 30 days of delivery for a full refund, as long as it is unused and in its original packaging."
+  },
+  {
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping takes 3-5 business days. Express shipping takes 1-2 business days."
+  },
+  {
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days."
+  },
+  {
+    "question": "How can I track my order?",
+    "answer": "Once your order ships, you'll receive an email with a tracking number and a link to track your package in real time."
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "answer": "We accept Visa, MasterCard, American Express, PayPal, and Apple Pay."
+  },
+  {
+    "question": "How do I cancel my order?",
+    "answer": "You can cancel your order within 1 hour of placing it by going to 'My Orders' and clicking 'Cancel Order'. After that window, please contact support."
+  },
+  {
+    "question": "Is my personal information secure?",
+    "answer": "Yes, we use industry-standard SSL encryption to protect your personal and payment information."
+  },
+  {
+    "question": "Can I change my shipping address after placing an order?",
+    "answer": "You can update your shipping address within 1 hour of placing the order by contacting customer support."
+  },
+  {
+    "question": "Do you offer gift wrapping?",
+    "answer": "Yes, gift wrapping is available at checkout for a small additional fee."
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can reach our customer support team via live chat, email at support@example.com, or by calling 1-800-555-0199."
+  },
+  {
+    "question": "What should I do if I received a damaged item?",
+    "answer": "Please contact customer support within 48 hours of delivery with photos of the damaged item, and we'll arrange a replacement or refund."
+  },
+  {
+    "question": "Do you have a loyalty or rewards program?",
+    "answer": "Yes! Sign up for our free rewards program to earn points on every purchase that can be redeemed for discounts."
+  },
+  {
+    "question": "Can I use multiple discount codes on one order?",
+    "answer": "Only one discount code can be applied per order."
+  },
+  {
+    "question": "How do I create an account?",
+    "answer": "Click 'Sign Up' at the top of the page, enter your email and password, and verify your email to activate your account."
+  },
+  {
+    "question": "I forgot my password, what should I do?",
+    "answer": "Click 'Forgot Password' on the login page and follow the instructions sent to your registered email to reset it."
+  }
+]

@@ -1,9 +1,4 @@
-"""
-nlp_utils.py
-------------
-Text preprocessing utilities built on NLTK:
-tokenization, lowercasing, punctuation/stopword removal, and lemmatization.
-"""
+
 
 import re
 import string
@@ -38,23 +33,13 @@ _PUNCT_TABLE = str.maketrans("", "", string.punctuation)
 
 
 def clean_and_lemmatize(text: str) -> str:
-    """
-    Full preprocessing pipeline for a piece of text:
-      1. Lowercase
-      2. Remove punctuation / non-alphanumeric characters
-      3. Tokenize
-      4. Remove stopwords
-      5. Lemmatize each remaining token
-
-    Returns the cleaned text as a single space-joined string, which is what
-    scikit-learn's TfidfVectorizer expects.
-    """
+   
     if not text:
         return ""
 
     text = text.lower()
     text = text.translate(_PUNCT_TABLE)
-    text = re.sub(r"\d+", " ", text)          # drop standalone numbers (keep it simple)
+    text = re.sub(r"\d+", " ", text)          
     text = re.sub(r"\s+", " ", text).strip()
 
     tokens = word_tokenize(text)

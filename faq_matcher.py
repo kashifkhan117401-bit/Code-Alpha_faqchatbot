@@ -1,10 +1,3 @@
-"""
-faq_matcher.py
---------------
-Loads a set of FAQs and matches an incoming user question to the most
-similar FAQ using TF-IDF vectorization + cosine similarity.
-"""
-
 import json
 from dataclasses import dataclass
 from typing import List, Optional
@@ -23,9 +16,6 @@ class MatchResult:
 
 
 class FAQMatcher:
-    """
-    Encapsulates FAQ loading, preprocessing, vectorization, and matching.
-    """
 
     def __init__(self, faqs_path: str = "faqs.json", confidence_threshold: float = 0.15):
         self.faqs_path = faqs_path
@@ -35,18 +25,16 @@ class FAQMatcher:
         self.questions = [faq["question"] for faq in self.faqs]
         self.answers = [faq["answer"] for faq in self.faqs]
 
-        # Preprocess every stored FAQ question once, up front.
+        
         self.cleaned_questions = [clean_and_lemmatize(q) for q in self.questions]
 
-        # Also blend in the answer text (down-weighted by repeating the
-        # question) so that keywords that only appear in an answer
-        # (e.g. "PayPal") can still help match a related user query.
+
         self.cleaned_corpus = [
             f"{clean_and_lemmatize(q)} {clean_and_lemmatize(q)} {clean_and_lemmatize(a)}"
             for q, a in zip(self.questions, self.answers)
         ]
 
-        # Fit a single TF-IDF vectorizer over the FAQ corpus.
+
         self.vectorizer = TfidfVectorizer()
         self.faq_matrix = self.vectorizer.fit_transform(self.cleaned_corpus)
 
@@ -59,10 +47,7 @@ class FAQMatcher:
         return data
 
     def best_match(self, user_query: str) -> Optional[MatchResult]:
-        """
-        Returns the best-matching FAQ for a user query, or None if the
-        best score is below the confidence threshold.
-        """
+      
         cleaned_query = clean_and_lemmatize(user_query)
         if not cleaned_query:
             return None
@@ -83,7 +68,7 @@ class FAQMatcher:
         )
 
     def top_matches(self, user_query: str, k: int = 3) -> List[MatchResult]:
-        """Returns the top-k matches (useful for debugging / suggestions)."""
+       
         cleaned_query = clean_and_lemmatize(user_query)
         if not cleaned_query:
             return []

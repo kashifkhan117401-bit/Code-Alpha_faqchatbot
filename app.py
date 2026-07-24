@@ -1,11 +1,3 @@
-"""
-app.py
-------
-Flask web server exposing:
-  GET  /              -> chat UI
-  POST /api/chat      -> {"message": "..."} -> {"answer": "...", "matched_question": "...", "score": ...}
-"""
-
 from flask import Flask, jsonify, render_template, request
 
 from faq_matcher import FAQMatcher
@@ -51,7 +43,7 @@ def chat():
 
 @app.route("/api/faqs")
 def list_faqs():
-    """Handy endpoint to show all available FAQs (e.g. for a sidebar)."""
+
     return jsonify(matcher.faqs)
 
 
